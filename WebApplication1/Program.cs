@@ -7,12 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
+builder.Services.AddDbContext<DBContext>(op => op.UseSqlServer(builder.Configuration.GetConnectionString("MsSql")));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<ITodoRepository, TodoRespository>();
+builder.Services.AddTransient<ITodoRepository, TodoRespository>();
 
 var app = builder.Build();
 

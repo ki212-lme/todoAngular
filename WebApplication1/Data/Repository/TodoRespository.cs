@@ -5,19 +5,20 @@ namespace WebApplication1.Data.Repository;
 
 public class TodoRespository:ITodoRepository
 {
-    private DBContext DbContext => new DBContext();
+    private DBContext DbContext { get; set; }
 
-    public TodoRespository()
+    public TodoRespository(DBContext dbContext)
     {
+        DbContext = dbContext;
     }
 
-    public async Task<Todo?> CreateTodo(Todo? model)
+    public async Task<Todo> CreateTodo(Todo model)
     {
         await using (DbContext)
         {
             try
-            {
-                await DbContext.Todos.AddAsync(model);
+            { 
+                DbContext.Todos.Add(model);
                 await  DbContext.SaveChangesAsync();
                 return model;
             }
@@ -77,7 +78,7 @@ public class TodoRespository:ITodoRepository
     {
         await using (DbContext)
         {
-            return  await DbContext.Todos.ToListAsync();
+            return  await DbContext.Todos.FromSql($"SELECT * FROM Todos ORDER BY case when DateComplete is null then 1 else 0 end,  DateComplete asc").ToListAsync();
         }
     }
 }

@@ -13,6 +13,13 @@ public class TodoController : Controller
     {
         TodoRepository = todoRepository;
     }
+
     [HttpGet]
-    public async Task<List<Todo>> f() => await TodoRepository.GetAllTodos();
+    public async Task<List<Todo>> GetAllTodos() => await TodoRepository.GetAllTodos();
+
+    [HttpPost]
+    public async Task<Todo> CreateTodo([FromBody] Todo todo)
+    {
+        return await TodoRepository.CreateTodo(todo);
+    }
 }
