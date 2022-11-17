@@ -5,9 +5,8 @@
     <projectFile profileName="WebApplication1">WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f46c48b-b7fd-48b3-89d2-9b9879eb67c8" name="Changes" comment="">
+    <list default="true" id="8f46c48b-b7fd-48b3-89d2-9b9879eb67c8" name="Changes" comment="changed connection string  nad todo controller">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668686910086</updated>
       <workItem from="1668686914179" duration="9695000" />
-      <workItem from="1668704325211" duration="823000" />
+      <workItem from="1668704325211" duration="1313000" />
     </task>
     <task id="LOCAL-00001" summary="added todo model">
       <created>1668697725575</created>
@@ -105,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668701851140</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed connection string  nad todo controller">
+      <created>1668705187304</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668705187304</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +136,7 @@
     <MESSAGE value="added db context and fixed todo type" />
     <MESSAGE value="added todoController, todoRepository and changed DbContext" />
     <MESSAGE value="deleted di for DbContext (it called build error)" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted di for DbContext (it called build error)" />
+    <MESSAGE value="changed connection string  nad todo controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed connection string  nad todo controller" />
   </component>
 </project>
