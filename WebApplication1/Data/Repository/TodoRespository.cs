@@ -12,7 +12,7 @@ public class TodoRespository:ITodoRepository
         DbContext = dbContext;
     }
 
-    public async Task<Todo> CreateTodo(Todo model)
+    public async Task<Todo> CreateTodoAsync(Todo model)
     {
         await using (DbContext)
         {
@@ -29,7 +29,7 @@ public class TodoRespository:ITodoRepository
         }
     }
 
-    public async Task<Todo> UpdateTodo(Todo model)
+    public async Task<Todo> UpdateTodoAsync(Todo model)
     {
         await using (DbContext)
         {
@@ -50,7 +50,7 @@ public class TodoRespository:ITodoRepository
         }
     }
 
-    public async Task<Todo?> GetById(int id)
+    public async Task<Todo?> GetByIdAsync(int id)
     {
         await using (DbContext)
         {
@@ -62,7 +62,7 @@ public class TodoRespository:ITodoRepository
     {
         await using (DbContext)
         {
-            var todo = await GetById(id);
+            var todo = await GetByIdAsync(id);
             if (todo == null)
             {
                 throw new Exception("todo with this id wasn't fin");
@@ -74,7 +74,7 @@ public class TodoRespository:ITodoRepository
         }
     }
 
-    public async Task<List<Todo>> GetAllTodos()
+    public async Task<List<Todo>> GetAllTodosAsync()
     {
         await using (DbContext)
         {

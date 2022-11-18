@@ -12,6 +12,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3b0f7d4199d4eb59c04605841b5535ea23898/9c/a1ad6cbe/AsyncValueTaskMethodBuilder`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f9daeeaab8409865442b5e80e634dc64dae9a14892fe81e0f17b46f51b2c48f8/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/obj/Debug/net6.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -32,6 +34,7 @@
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\макс\\RiderProjects\\WebApplication1\\WebApplication1\\ClientApp\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -82,7 +85,9 @@
       <updated>1668686910086</updated>
       <workItem from="1668686914179" duration="9695000" />
       <workItem from="1668704325211" duration="1405000" />
-      <workItem from="1668717446147" duration="1111000" />
+      <workItem from="1668717446147" duration="4469000" />
+      <workItem from="1668761797362" duration="1149000" />
+      <workItem from="1668763458057" duration="1000000" />
     </task>
     <task id="LOCAL-00001" summary="added todo model">
       <created>1668697725575</created>
@@ -154,5 +159,50 @@
     <MESSAGE value="changed connection string  nad todo controller" />
     <MESSAGE value="added some files to index" />
     <option name="LAST_COMMIT_MESSAGE" value="added some files to index" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApplication1/Data/Repository/TodoRespository.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\Data\Repository\TodoRespository.cs" initialLine="19" containingFunctionPresentation="method 'CreateTodo'">
+            <startOffsets>
+              <option value="479" />
+            </startOffsets>
+            <endOffsets>
+              <option value="506" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApplication1/Data/Repository/TodoRespository.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\Data\Repository\TodoRespository.cs" initialLine="20" containingFunctionPresentation="method 'CreateTodo'">
+            <startOffsets>
+              <option value="523" />
+            </startOffsets>
+            <endOffsets>
+              <option value="559" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApplication1/Data/Repository/TodoRespository.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\Data\Repository\TodoRespository.cs" initialLine="21" containingFunctionPresentation="method 'CreateTodo'">
+            <startOffsets>
+              <option value="576" />
+            </startOffsets>
+            <endOffsets>
+              <option value="589" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

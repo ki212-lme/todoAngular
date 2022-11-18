@@ -2,9 +2,9 @@
 
 public interface ITodoRepository
 {
-    public Task<Todo> CreateTodo(Todo model);
-    public Task<Todo> UpdateTodo(Todo model);
-    public Task<Todo?> GetById(int id);
+    public Task<Todo> CreateTodoAsync(Todo model);
+    public Task<Todo> UpdateTodoAsync(Todo model);
+    public Task<Todo?> GetByIdAsync(int id);
     public Task<Todo> DeleteTodo(int id);
-    public Task<List<Todo>> GetAllTodos();
+    public Task<List<Todo>> GetAllTodosAsync();
 }
