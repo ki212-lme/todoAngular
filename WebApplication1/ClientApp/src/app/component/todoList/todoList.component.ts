@@ -4,7 +4,8 @@ import {ITodoItem} from "../../type/todoType";
 
 @Component({
   selector: "todo-list",
-  templateUrl: "todoList.component.html"
+  templateUrl: "todoList.component.html",
+  styleUrls: ['./todoList.component.css']
 })
 export class TodoListComponent{
   @Input() todos:ITodoItem[]

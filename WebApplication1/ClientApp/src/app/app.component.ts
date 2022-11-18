@@ -9,5 +9,5 @@ import {todos} from "./data/todos";
 })
 export class AppComponent {
   title = 'ClientApp'
-  todos : ITodoItem[] = todos
+
 }

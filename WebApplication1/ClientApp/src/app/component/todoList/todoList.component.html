@@ -1,1 +1,7 @@
-<todo-item *ngFor="let todo of todos" [todo]="todo"></todo-item>
+<div class="todo-list">
+  <div style="display: flex">
+    <p>Title</p>
+    <p>Date completed</p>
+  </div>
+  <todo-item *ngFor="let todo of todos" [todo]="todo"></todo-item>
+</div>

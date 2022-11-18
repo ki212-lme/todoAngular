@@ -18,8 +18,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ITodoRepository, TodoRespository>();
 
+builder.Services.AddCors(
+    builder => {
+        builder.AddPolicy("DefaultPolicy", 
+            option=>option
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+    });
+
 var app = builder.Build();
 
+app.UseCors("DefaultPolicy");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

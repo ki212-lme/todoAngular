@@ -7,6 +7,7 @@ import {TodoComponent} from "./component/todo/todo.component";
 import {TodoListComponent} from "./component/todoList/todoList.component";
 import {TodoCreator} from "./component/todoCreate/todoCreator.component";
 import {TodosComponent} from "./component/todoWrapper/todoWrapper.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {TodosComponent} from "./component/todoWrapper/todoWrapper.component";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

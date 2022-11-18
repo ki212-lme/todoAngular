@@ -72,3 +72,9 @@ C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\obj\Debug\net6.0
 C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\obj\Debug\net6.0\WebApplication1.pdb
 C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\obj\Debug\net6.0\WebApplication1.genruntimeconfig.cache
 C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll
+C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\bin\Debug\net6.0\ClientApp\angular.json
+C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\bin\Debug\net6.0\ClientApp\package-lock.json
+C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\bin\Debug\net6.0\ClientApp\package.json
+C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\bin\Debug\net6.0\ClientApp\tsconfig.app.json
+C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\bin\Debug\net6.0\ClientApp\tsconfig.json
+C:\Users\макс\RiderProjects\WebApplication1\WebApplication1\bin\Debug\net6.0\ClientApp\tsconfig.spec.json
