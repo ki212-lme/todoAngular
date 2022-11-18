@@ -1,0 +1,7 @@
+/node_modules
+/bin
+/.idea
+/.vs
+.vs/
+bin/
+obj
