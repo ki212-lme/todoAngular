@@ -11,8 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 string connectionString =
-        $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Directory.GetCurrentDirectory()
-       + @"\Data\Db\Tododb.mdf"}" + @";Integrated Security=True;";
+    $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Directory.GetCurrentDirectory()
+                                                            + @"\Data\Db\Tododb.mdf"}" + @";Integrated Security=True;";
 
 builder.Services.AddDbContext<DBContext>(op => op.UseSqlServer(connectionString));
 builder.Services.AddControllers();
@@ -22,9 +22,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ITodoRepository, TodoRespository>();
 
 builder.Services.AddCors(
-    builder => {
-        builder.AddPolicy("DefaultPolicy", 
-            option=>option
+    builder =>
+    {
+        builder.AddPolicy("DefaultPolicy",
+            option => option
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader());
