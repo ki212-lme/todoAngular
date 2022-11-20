@@ -40,4 +40,18 @@ public class TodoController : Controller
 
         throw new Exception("error to change state");
     }
+    [HttpPost]
+    [Route("archive")]
+    public async Task<Todo> Archive([FromBody] Todo todo)
+    {
+        var todoModel = await TodoRepository.GetByIdAsync(todo.Id);
+        if (todoModel != null)
+        {
+            todoModel.IsArchived = todo.IsArchived;
+            await TodoRepository.UpdateTodoAsync(todoModel);
+            return todoModel;
+        }
+
+        throw new Exception("error to change archive state state");
+    }
 }

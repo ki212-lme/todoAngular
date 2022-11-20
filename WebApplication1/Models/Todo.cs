@@ -9,6 +9,7 @@ public class Todo
     [Required]
     public string Description { get; set; }
     public DateTime? DateComplete { get; set; }
-    //null=archived, true=completed,false= uncomplete
-    public bool? IsCompleted { get; set; }
+    //null=archived, true=completed
+    public bool IsCompleted { get; set; }
+    public bool IsArchived { get; set; }
 }

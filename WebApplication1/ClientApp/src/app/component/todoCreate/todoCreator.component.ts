@@ -24,7 +24,8 @@ export class TodoCreator {
           new Date(`${this.todoForm.controls.dateComplete.value}`) : null,
         description: `${this.todoForm.controls.description.value}`,
         id: 0,
-        isCompleted: false
+        isCompleted: false,
+        isArchived: false
       };
       this.todoService.createTodo(newTodo).subscribe();
     }

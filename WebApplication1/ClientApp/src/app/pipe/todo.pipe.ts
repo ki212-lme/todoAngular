@@ -4,7 +4,7 @@ import {ITodoItem} from "../type/todoType";
   name : 'todoFilter'
 })
 export class TodoPipe implements PipeTransform {
-  transform(arr:ITodoItem[],filterState:boolean) : ITodoItem[] {
-    return arr.filter(x=>x.isCompleted==filterState);
+  transform(arr:ITodoItem[],callback: (item:ITodoItem) => boolean) : ITodoItem[] {
+    return arr.filter(x=>callback(x));
   }
 }

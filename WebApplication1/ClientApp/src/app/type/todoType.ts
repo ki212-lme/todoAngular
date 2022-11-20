@@ -1,6 +1,7 @@
 export interface ITodoItem{
   id: number,
-  isCompleted: boolean|null,
+  isCompleted: boolean,
+  isArchived: boolean,
   description: string,
   dateComplete: Date|null
 }
