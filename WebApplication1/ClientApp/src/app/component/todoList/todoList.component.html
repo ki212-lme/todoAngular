@@ -1,14 +1,37 @@
-<div>
-  <button (click)="showArchived=!showArchived"> {{showArchived ? "Show todos" : "Show archive"}}</button>
-</div>
-
 <div class="main-block">
-  <p style="text-align: center">Tasks{{showArchived?"(archived tasks)":""}}</p>
+  <div class="arch-wrap-button">
+
+    <div class="legend-map">
+      <div class="point">
+        <p><b>Legend:</b></p>
+      </div>
+      <div class="point">
+        <div class="green-circle"></div>
+        <label>Completed</label>
+      </div>
+      <div class="point">
+        <div class="blue-circle"></div>
+        <label>Current</label>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-archive"
+        (click)="showArchived=!showArchived"> {{showArchived ? "Show current todos" : "Show archived todos"}}</button>
+    </div>
+  </div>
+
+  <h2 style="text-align: center">Tasks{{showArchived ? "(archived tasks)" : ""}}</h2>
   <div class="todo-list " *ngIf="todos.length>0">
     <div style="display: flex" class="header">
-      <p class="flex-item">Title</p>
-      <p class="flex-item">Date completed</p>
-      <p class="flex-item">Actions</p>
+      <div class="flex-item">
+        <p>Title</p>
+      </div>
+      <div class="flex-item">
+        <p>Date completed</p>
+      </div>
+      <div class="flex-item">
+        <p>Actions</p>
+      </div>
     </div>
     <todo-item
       *ngFor="let todo of getTodos()"

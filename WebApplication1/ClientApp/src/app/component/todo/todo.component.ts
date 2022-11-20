@@ -5,7 +5,7 @@ import {TodoService} from "../../apiService/todoService";
 @Component({
   selector: "todo-item",
   templateUrl: "todo.component.html",
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.css','../../app.component.css']
 })
 export class TodoComponent{
   @Input() todo: ITodoItem

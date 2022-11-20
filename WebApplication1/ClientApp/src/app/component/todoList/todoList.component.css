@@ -4,11 +4,56 @@
 }
 
 .header {
-  border-bottom: 3px solid blueviolet;
   border-radius: 5px;
 }
 .main-block{
+  margin-top: 15px;
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
+}
+.header > div > p{
+  width: fit-content;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 2px;
+  border-bottom: 1px solid blueviolet;
+}
+.header > div.flex-item{
+  text-align: center;
+  align-items: center;
+}
+
+.arch-wrap-button{
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blue-circle{
+  background-color: dodgerblue;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+}
+
+.green-circle{
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 3px;
+  width: 10px;
+  height: 10px;
+}
+.legend-map{
+  display: flex;
+}
+.legend-map > *{
+  margin-left: 2px;
+}
+.legend-map .point{
+
+  display: flex;
+  align-items: center;
 }

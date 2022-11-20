@@ -5,10 +5,10 @@
   <p class="flex-item">{{todo.description}}</p>
   <p class="flex-item">{{todo.dateComplete|date}}</p>
   <div class="flex-item">
-  <button
+  <button class="btn btn-accept" style="margin-right: 2px"
     *ngIf="!todo.isCompleted"
     (click)="changeCompletedState(!todo.isCompleted)" >Done</button>
-  <button
+  <button class="btn btn-archive"
     (click)="changeArchiveState(!todo.isArchived)"
   >
     {{todo.isArchived?"Unarchive":"Archive"}}

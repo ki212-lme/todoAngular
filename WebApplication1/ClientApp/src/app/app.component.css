@@ -15,3 +15,6 @@
   border-radius: 5px;
   cursor: pointer;
 }
+*{
+  font-family: DejaVu Sans Mono, monospace;
+}

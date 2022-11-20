@@ -1,5 +1,6 @@
 .app-block{
   width: 650px;
+  margin: 0 auto;
 }
 .wrap-block{
   box-shadow: 0 8px 10px rgba(0,0,0,0.4), 0 10px 10px rgba(0,0,0,0.3);
