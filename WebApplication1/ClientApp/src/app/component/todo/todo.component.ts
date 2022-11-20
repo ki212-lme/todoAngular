@@ -11,11 +11,16 @@ export class TodoComponent{
   @Input() todo: ITodoItem
   constructor(private todoService:TodoService) {
   }
-  changeCompletedState(newState:boolean){
+  changeCompletedState(newState:boolean) {
     this.todo.isCompleted = newState;
-    this.todoService.changeStateTodo(this.todo).subscribe((data)=>{
-    this.todo = data;
+    this.todoService.updateTodo(this.todo).subscribe((data) => {
+      this.todo = data;
     });
   }
-
+  changeArchiveState(newState:boolean){
+    this.todo.isArchived = newState;
+    this.todoService.updateTodo(this.todo).subscribe((data) => {
+      this.todo = data;
+    });
+  }
 }

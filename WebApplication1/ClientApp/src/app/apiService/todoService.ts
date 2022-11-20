@@ -24,9 +24,9 @@ export class TodoService {
     });
   }
 
-  changeStateTodo(todo:ITodoItem){
+  updateTodo(todo:ITodoItem){
     console.log("asd");
-    return this.httpClient.post<ITodoItem>("https://localhost:7139/api/todo/changeState",todo, {
+    return this.httpClient.post<ITodoItem>("https://localhost:7139/api/todo/update",todo, {
       headers: new HttpHeaders(
         {
           'Content-Type': 'application/json; charset=utf-8 ',

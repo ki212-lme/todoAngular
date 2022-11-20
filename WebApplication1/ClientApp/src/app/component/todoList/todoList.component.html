@@ -1,14 +1,17 @@
 <div>
   <button (click)="showArchived=!showArchived"> {{showArchived ? "Show todos" : "Show archive"}}</button>
 </div>
-<h2 *ngIf="showArchived">Archive</h2>
-<div class="todo-list" *ngIf="todos.length>0">
-  <div style="display: flex">
-    <p class="flex-item">Title</p>
-    <p class="flex-item">Date completed</p>
+
+<div class="main-block">
+  <p style="text-align: center">Tasks{{showArchived?"(archived tasks)":""}}</p>
+  <div class="todo-list " *ngIf="todos.length>0">
+    <div style="display: flex" class="header">
+      <p class="flex-item">Title</p>
+      <p class="flex-item">Date completed</p>
+      <p class="flex-item">Actions</p>
+    </div>
+    <todo-item
+      *ngFor="let todo of getTodos()"
+      [todo]="todo"></todo-item>
   </div>
-  <p>Current Task</p>
-  <todo-item
-    *ngFor="let todo of getTodos()"
-    [todo]="todo"></todo-item>
 </div>

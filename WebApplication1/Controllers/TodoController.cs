@@ -27,25 +27,10 @@ public class TodoController : Controller
     }
 
     [HttpPost]
-    [Route("changeState")]
-    public async Task<Todo> ChangeCompleteState([FromBody] Todo todo)
+    [Route("update")]
+    public async Task<Todo> Update([FromBody] Todo todo)
     {
-        
-         return await TodoRepository.UpdateTodoAsync(todo);
+        return await TodoRepository.UpdateTodoAsync(todo);
     }
 
-    [HttpPost]
-    [Route("archive")]
-    public async Task<Todo> Archive([FromBody] Todo todo)
-    {
-        var todoModel = await TodoRepository.GetByIdAsync(todo.Id);
-        if (todoModel != null)
-        {
-            todoModel.IsArchived = todo.IsArchived;
-            await TodoRepository.UpdateTodoAsync(todoModel);
-            return todoModel;
-        }
-
-        throw new Exception("error to change archive state state");
-    }
 }

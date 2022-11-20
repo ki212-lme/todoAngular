@@ -3,6 +3,7 @@
   border-radius: 10px;
   display: flex;
   margin: 2px;
+  align-items: center;
 }
 .not-complete{
   border: dodgerblue 2px solid;
