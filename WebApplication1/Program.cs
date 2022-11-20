@@ -9,9 +9,12 @@ using WebApplication1.Data.Repository.RepositoryInterfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
-builder.Services.AddDbContext<DBContext>(op => op.UseSqlServer(builder.Configuration.GetConnectionString("MsSql")));
+string connectionString =
+        $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Directory.GetCurrentDirectory()
+       + @"\Data\Db\Tododb.mdf"}" + @";Integrated Security=True;";
+
+builder.Services.AddDbContext<DBContext>(op => op.UseSqlServer(connectionString));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
