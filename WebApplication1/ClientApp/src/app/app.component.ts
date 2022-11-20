@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {ITodoItem} from "./type/todoType";
-import {todos} from "./data/todos";
 
 @Component({
   selector: 'app-root',

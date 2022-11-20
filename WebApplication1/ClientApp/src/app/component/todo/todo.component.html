@@ -1,7 +1,7 @@
 <div class="todo-item" [ngClass]="{
-'complete': !todo.isCompleted,
-'not-complete': todo.isCompleted
+'complete': todo.isCompleted,
+'not-complete': !todo.isCompleted
 }">
   <p>{{todo.description}}</p>
-  <p>{{todo.dateCompleted|date}}</p>
+  <p>{{todo.dateComplete|date}}</p>
 </div>

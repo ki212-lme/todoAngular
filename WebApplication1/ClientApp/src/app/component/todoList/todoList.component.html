@@ -4,7 +4,8 @@
     <p>Date completed</p>
   </div>
   <p>Current Task</p>
-  <todo-item  *ngFor="let todo of todos| todoFilter:true" [todo]="todo"></todo-item>
-  <p>Completed Task</p>
   <todo-item  *ngFor="let todo of todos| todoFilter:false" [todo]="todo"></todo-item>
+  <p>Completed Task</p>
+  <todo-item  *ngFor="let todo of todos| todoFilter:true" [todo]="todo"></todo-item>
+
 </div>

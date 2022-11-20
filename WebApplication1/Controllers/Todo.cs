@@ -20,10 +20,12 @@ public class TodoController : Controller
     public async Task<List<Todo>> GetAllTodos() => await TodoRepository.GetAllTodosAsync();
 
     [HttpPost]
+    [Route("create")]
     public async Task<Todo> CreateTodo([FromBody] Todo todo)
     {
         return await TodoRepository.CreateTodoAsync(todo);
     }
+    
     [HttpPost]
     [Route("changeState")]
     public async Task<Todo> ChangeCompleteState([FromBody] Todo todo)
