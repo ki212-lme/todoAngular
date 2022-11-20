@@ -24,13 +24,14 @@ export class TodoService {
     });
   }
 
-  // changeStateTodo(id:number,newState:boolean|null){
-  //   return  this.httpClient.post<ITodoItem>("https://localhost:7139/api/todo",new {
-  // headers: {
-  //   'Content-Type': 'application/json'
-  // },
-  //     id: id,
-  //     newState: newState
-  //   } as ITodoItem);
-  // }
+  changeStateTodo(todo:ITodoItem){
+    console.log("asd");
+    return this.httpClient.post<ITodoItem>("https://localhost:7139/api/todo/changeState",todo, {
+      headers: new HttpHeaders(
+        {
+          'Content-Type': 'application/json; charset=utf-8 ',
+          'accept': 'application/json'
+        })
+    });
+  }
 }

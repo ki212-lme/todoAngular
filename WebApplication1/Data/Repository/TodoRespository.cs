@@ -5,7 +5,7 @@ using WebApplication1.Data.Repository.RepositoryInterfaces;
 
 namespace WebApplication1.Data.Repository;
 
-public class TodoRespository:ITodoRepository
+public class TodoRespository : ITodoRepository
 {
     private DBContext DbContext { get; set; }
 
@@ -19,9 +19,9 @@ public class TodoRespository:ITodoRepository
         await using (DbContext)
         {
             try
-            { 
+            {
                 DbContext.Todos.Add(model);
-                await  DbContext.SaveChangesAsync();
+                await DbContext.SaveChangesAsync();
                 return model;
             }
             catch (Exception e)
@@ -35,20 +35,9 @@ public class TodoRespository:ITodoRepository
     {
         await using (DbContext)
         {
-            try
-            {
-                var todo = await DbContext.Todos.FirstOrDefaultAsync(x=>x.Id==model.Id);
-                if (todo!=null)
-                {
-                    todo = model;
-                }
-                await DbContext.SaveChangesAsync();
-                return model;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.ToString());
-            }
+            var todo =  DbContext.Todos.Update(model);
+            await DbContext.SaveChangesAsync();
+            return model;
         }
     }
 
@@ -56,7 +45,7 @@ public class TodoRespository:ITodoRepository
     {
         await using (DbContext)
         {
-            return await DbContext.Todos.FirstOrDefaultAsync(x=>x.Id==id);
+            return await DbContext.Todos.FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 
@@ -70,7 +59,7 @@ public class TodoRespository:ITodoRepository
                 throw new Exception("todo with this id wasn't fin");
             }
 
-            DbContext.Todos.Remove(new Todo(){Id = id});
+            DbContext.Todos.Remove(new Todo() { Id = id });
             await DbContext.SaveChangesAsync();
             return todo;
         }
@@ -80,7 +69,10 @@ public class TodoRespository:ITodoRepository
     {
         await using (DbContext)
         {
-            return  await DbContext.Todos.FromSql($"SELECT * FROM Todos ORDER BY case when DateComplete is null then 1 else 0 end,  DateComplete asc").ToListAsync();
+            return await DbContext.Todos
+                .FromSql(
+                    $"SELECT * FROM Todos ORDER BY case when DateComplete is null then 1 else 0 end,  DateComplete asc")
+                .ToListAsync();
         }
     }
 }

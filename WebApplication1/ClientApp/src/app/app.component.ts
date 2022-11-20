@@ -8,5 +8,4 @@ import {ITodoItem} from "./type/todoType";
 })
 export class AppComponent {
   title = 'ClientApp'
-
 }

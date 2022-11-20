@@ -4,4 +4,6 @@
 }">
   <p class="flex-item">{{todo.description}}</p>
   <p class="flex-item">{{todo.dateComplete|date}}</p>
+  <button *ngIf="!todo.isCompleted" (click)="changeCompletedState(!todo.isCompleted)" >Done</button>
+  <button *ngIf="!todo.isArchived">Acrhive</button>
 </div>

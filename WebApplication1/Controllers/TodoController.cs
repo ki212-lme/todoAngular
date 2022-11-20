@@ -25,21 +25,15 @@ public class TodoController : Controller
     {
         return await TodoRepository.CreateTodoAsync(todo);
     }
-    
+
     [HttpPost]
     [Route("changeState")]
     public async Task<Todo> ChangeCompleteState([FromBody] Todo todo)
     {
-        var todoModel = await TodoRepository.GetByIdAsync(todo.Id);
-        if (todoModel != null)
-        {
-            todoModel.IsCompleted = todo.IsCompleted;
-            await TodoRepository.UpdateTodoAsync(todoModel);
-            return todoModel;
-        }
-
-        throw new Exception("error to change state");
+        
+         return await TodoRepository.UpdateTodoAsync(todo);
     }
+
     [HttpPost]
     [Route("archive")]
     public async Task<Todo> Archive([FromBody] Todo todo)

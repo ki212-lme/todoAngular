@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges} from "@angular/core";
 import {ITodoItem} from "../../type/todoType";
 import {TodoService} from "../../apiService/todoService";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
@@ -8,19 +8,21 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   templateUrl: "todoWrapper.component.html",
   styleUrls: ['todoWrapper.component.css','../../app.component.css']
 })
-export class TodosComponent implements OnInit{
-  todos : ITodoItem[] = []
+export class TodosComponent implements OnInit {
+  todos: ITodoItem[] = []
   dateEnable: boolean = true;
+  showArchived: boolean = false;
+
   todoForm = new FormGroup({
     description: new FormControl("", Validators.pattern("[A-z]{1,25}")),
     dateComplete: new FormControl(""),
   });
 
-
-  constructor(private todoService:TodoService) {}
+  constructor(private todoService: TodoService) {
+  }
 
   ngOnInit(): void {
-    this.todoService.getAllTodos().subscribe((data)=>{
+    this.todoService.getAllTodos().subscribe((data) => {
       this.todos = data;
     })
   }
@@ -35,11 +37,16 @@ export class TodosComponent implements OnInit{
         isCompleted: false,
         isArchived: false
       };
-      this.todoService.createTodo(newTodo).subscribe(data=>{
-        if(data){
+      this.todoService.createTodo(newTodo).subscribe(data => {
+        if (data) {
           this.ngOnInit();
         }
       });
     }
   }
+
+  changeStateAccepted() {
+
+  }
 }
+
