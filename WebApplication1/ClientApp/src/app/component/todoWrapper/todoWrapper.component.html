@@ -1,2 +1,13 @@
-<todo-creator></todo-creator>
+<div class="app-block">
+  <form [formGroup]="todoForm" (ngSubmit)="addTodo()" class="wrap-block">
+    <label >Name</label>
+    <input  formControlName="description"  type="text" >
+    <button class="btn btn-accept" (click)="dateEnable=!dateEnable">{{dateEnable?"Disable":"Enable"}} Date</button>
+    <div *ngIf="dateEnable">
+      <label>Date completed</label>
+      <input formControlName="dateComplete" type="date">
+    </div>
+    <button  class="btn btn-accept"   type="submit">Add Todo</button>
+  </form>
 <todo-list [todos]="todos"></todo-list>
+</div>

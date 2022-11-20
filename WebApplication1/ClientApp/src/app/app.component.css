@@ -1,0 +1,17 @@
+.btn-accept{
+  background-color: #67bd67;
+}
+.btn-archive{
+  background-color: #6d6d6d;
+}
+.btn-cancel{
+  background-color: #a61e1e;
+}
+
+.btn{
+  border: 0;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}

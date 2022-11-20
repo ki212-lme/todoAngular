@@ -10,3 +10,7 @@
 .complete{
   border: green 2px solid;
 }
+.flex-item{
+  flex-basis: 50%;
+  text-align: center;
+}

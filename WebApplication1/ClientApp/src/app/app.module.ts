@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {TodoComponent} from "./component/todo/todo.component";
 import {TodoListComponent} from "./component/todoList/todoList.component";
-import {TodoCreator} from "./component/todoCreate/todoCreator.component";
 import {TodosComponent} from "./component/todoWrapper/todoWrapper.component";
 import {HttpClientModule} from "@angular/common/http";
 import {TodoPipe} from "./pipe/todo.pipe";
@@ -16,7 +15,6 @@ import {ReactiveFormsModule} from "@angular/forms";
     AppComponent,
     TodoComponent,
     TodoListComponent,
-    TodoCreator,
     TodosComponent,
     TodoPipe
   ],

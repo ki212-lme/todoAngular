@@ -1,11 +1,10 @@
 import {Component, Input} from "@angular/core";
 import {ITodoItem} from "../../type/todoType";
-import {TodoCreator} from "../todoCreate/todoCreator.component";
 
 @Component({
   selector: "todo-list",
   templateUrl: "todoList.component.html",
-  styleUrls: ['./todoList.component.css']
+  styleUrls: ['./todoList.component.css','../todo/todo.component.css']
 })
 export class TodoListComponent{
   @Input() todos:ITodoItem[]
